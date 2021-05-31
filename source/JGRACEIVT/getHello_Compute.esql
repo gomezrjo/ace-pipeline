@@ -4,8 +4,10 @@ CREATE COMPUTE MODULE getHello_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		CALL CopyMessageHeaders();
-		SET OutputRoot.JSON.Data.
 		-- CALL CopyEntireMessage();
+		SET OutputRoot.JSON.Data.code = 'CP4I0055';
+		SET OutputRoot.JSON.Data.msg = 'Hello from App Connect Enterprise"';
+		SET OutputRoot.JSON.Data.time = CURRENT_TIMESTAMP;
 		RETURN TRUE;
 	END;
 
