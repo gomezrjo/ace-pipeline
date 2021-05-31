@@ -1,0 +1,42 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "JGRACEIVT",
+    "version" : "1.0.0",
+    "description" : "JGRACEIVT"
+  },
+  "paths" : {
+    "/hello" : {
+      "get" : {
+        "operationId" : "getHello",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/jgr-response"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve hello"
+      }
+    }
+  },
+  "basePath" : "/jgraceivt/v1",
+  "definitions" : {
+    "jgr-response" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string"
+        },
+        "msg" : {
+          "type" : "string"
+        },
+        "time" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
