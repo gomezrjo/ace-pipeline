@@ -1,0 +1,24 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: acecicd-pipeline-trigger
+spec:
+  resourcetemplates:
+  - apiVersion: tekton.dev/v1beta1
+    kind: PipelineRun
+    metadata:
+      generateName: acecicd-pipeline-run-
+      namespace: cp4i-ace
+      labels:
+        tekton.dev/pipeline: acecicd-pipeline
+    spec:
+      pipelineRef:
+        name: acecicd-pipeline
+      resources:
+        - name: git-repo
+          resourceRef:
+            name: acecicd-res-git
+        - name: image
+          resourceRef:
+            name: acecicd-res-image
+      serviceAccountName: pipeline
