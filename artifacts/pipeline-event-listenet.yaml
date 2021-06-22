@@ -1,0 +1,10 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: acecicd-listener
+spec:
+  serviceAccountName: pipeline
+  triggers:
+  - name: acecicd-pipeline-trigger
+    template:
+      name: acecicd-pipeline-trigger
