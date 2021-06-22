@@ -1,6 +1,7 @@
 # Deployment order:
 
 1. PipelineResource: GIT
+Note:
 2. PipelineResource: Image
 3. PipelineTask: DockerF Build Push
 4. PipelineTask: Deploy ACE Img
