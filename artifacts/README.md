@@ -1,8 +1,10 @@
 # Deployment order:
 
-1. PipelineTask: DockerF Build Push
-2. PipelineTask: Deploy ACE Img
-3. Pipeline: ACE CICD
-4. PipelineTriggerTemplate: ACE CICD
-5. PipelineEventListener: ACE CICD
-6. PipelineRoute: ACE CICD
+1. PipelineResource: GIT
+2. PipelineResource: Image
+3. PipelineTask: DockerF Build Push
+4. PipelineTask: Deploy ACE Img
+5. Pipeline: ACE CICD
+6. PipelineTriggerTemplate: ACE CICD
+7. PipelineEventListener: ACE CICD
+8. PipelineRoute: Event Listener ACE CICD
