@@ -1,4 +1,4 @@
-FROM ibmcom/ace-server:latest
+FROM ibmcom/ace-server:11.0.0.10-r1-20200911-030305
 COPY source/JGRACEIVT /home/aceuser/JGRACEIVT
 RUN export LICENSE="accept" \
     && source /opt/ibm/ace-11/server/bin/mqsiprofile \
