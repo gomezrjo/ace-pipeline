@@ -6,7 +6,7 @@ CREATE COMPUTE MODULE getHello_Compute
 		CALL CopyMessageHeaders();
 		-- CALL CopyEntireMessage();
 		SET OutputRoot.JSON.Data.code = 'CP4I0055';
-		SET OutputRoot.JSON.Data.msg = 'Hello from App Connect Enterprise using RedHat OpenShift Container Platform with Pipelines (aka Tekton) - Demo Citi-Banamex';
+		SET OutputRoot.JSON.Data.msg = 'Hello from App Connect Enterprise using RedHat OpenShift Container Platform with Pipelines (aka Tekton) - Demo CoopDesa';
 		SET OutputRoot.JSON.Data.time = CURRENT_TIMESTAMP;
 		RETURN TRUE;
 	END;
