@@ -7,4 +7,4 @@ spec:
   triggers:
   - name: acecicd-pipeline-trigger
     template:
-      name: acecicd-pipeline-trigger
+      ref: acecicd-pipeline-trigger
