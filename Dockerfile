@@ -1,4 +1,4 @@
-FROM cp.icr.io/cp/appc/ace-server-prod@sha256:f9b2b5e385f462d60a3fedf2aa7366b3bc304e971c89fafe6425cf2949a472c6
+FROM icr.io/appc-dev/ace-server@sha256:9c0ab33cf01233b52e1273e559c1b1daa2f23282430ecd2c48001fc0469132f3
 COPY source/JGRACEIVT /home/aceuser/JGRACEIVT
 RUN export LICENSE="accept" \
     && source /opt/ibm/ace-11/server/bin/mqsiprofile \
