@@ -40,7 +40,7 @@ spec:
           --tls-verify=$(params.TLSVERIFY) --layers \
           -f $(params.DOCKERFILE) -t $(resources.inputs.image.url)/$(params.namespace)/$imgname:$imgtag .
       securityContext:
-        privileged: true
+        privileged: false
       resources: {}
       volumeMounts:
         - mountPath: /var/lib/containers
@@ -56,7 +56,7 @@ spec:
         echo -n $imgname > /tekton/results/image_name
       image: $(params.BUILDER_IMAGE)
       securityContext:
-        privileged: true
+        privileged: false
       volumeMounts:
         - mountPath: /var/lib/containers
           name: varlibcontainers
